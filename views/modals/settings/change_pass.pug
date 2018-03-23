@@ -1,0 +1,19 @@
+div.modal#change_pass(tabindex="-1", role="dialog")
+    div.modal-dialog(role="document")
+        div.modal-content
+            div.modal-header
+                h5.modal-title Cambiar Contraseña
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                    span(aria-hidden="true") &times
+       
+            div.modal-body
+                div.content_form
+                    div.form-group
+                        label(for="password") Contraseña
+                        input.form-control#password(type="password", placeholder="Ingrese su contraseña")
+                    div.form-group
+                        label(for="confirm_password") Contraseña
+                        input.form-control#confirm_password(type="password", placeholder="Ingrese nuevamente su contraseña")
+            div.modal-footer
+                button.btn.btn-primary#save_pass(type="button") Guardar
+                button.btn.btn-secondary#cancel_change_pass(type="button", data-dismiss="modal") Cancelar

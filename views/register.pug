@@ -1,0 +1,47 @@
+extends layout/struct_short
+
+block styles
+    link(rel="stylesheet", href="/css/views/login.css")
+    
+block modals
+    
+block content
+    div.content_form
+        div.logo_bann
+            img(src="/img/sgc_long_black.png")
+        h2.text-center Registro
+        div.form-group
+            label(for="name") Nombre(s)
+            input.form-control#name(type="text", placeholder="Ingrese su nombre")
+        div.form-group
+            label(for="surname") Apellido(s)
+            input.form-control#surname(type="text", placeholder="Ingrese su apellido")
+        div.form-group
+            label(for="id") No. Identificación
+            input.form-control#id(type="number", placeholder="Ingrese su numero identificación")
+        div.form-group
+            label(for="phone") No. Teléfono
+            input.form-control#phone(type="number", placeholder="Ingrese su numero teléfono")
+        div.form-group
+            label(for="address") Dirección
+            input.form-control#address(type="text", placeholder="Ingrese su dirección")
+        div.form-group
+            label(for="email") Email
+            input.form-control#email(type="email", placeholder="Ingrese su email")
+        div.form-group
+            label(for="password") Contraseña
+            input.form-control#password(type="password", placeholder="Ingrese su contraseña")
+        div.form-group
+            label(for="confirm_password") Contraseña
+            input.form-control#confirm_password(type="password", placeholder="Ingrese nuevamente su contraseña")
+        div.form-group
+            label(for="profile") Perfil
+            select.form-control#profile
+                option(value="investigador") Investigador
+                option(value="técnico de laboratorio") Técnico de laboratorio
+                option(value="auxiliar administrativo") Auxiliar administrativo 
+        div.form-group.mt-4.text-center
+            button#accept.btn.btn-success(type="submit") Registrar
+            
+block scripts
+    script(src="/js/views/register.js")

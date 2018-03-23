@@ -1,0 +1,22 @@
+doctype html
+html(lan="es")
+    head
+        title SGC
+        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        link(rel="stylesheet", href="/bootstrap/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/css/includes.css")
+        block styles
+    body
+        div.window
+            block modals
+            include menu
+            div.content
+                include title_bar
+                block content
+    
+    script(src="/jquery/jquery.min.js")
+    script(src="/bootstrap/js/bootstrap.min.js")
+    script(defer, src="https://use.fontawesome.com/releases/v5.0.8/js/all.js", integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ", crossorigin="anonymous")
+    script(src="/js/control.js")
+    script(src="/js/components/menu.js")
+    block scripts

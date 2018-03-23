@@ -1,0 +1,1 @@
+function size(){800<$(window).width()?$(".window > .content").css("width",$(window).width()-$(".index_menu").width()):$(".window > .content").css("width","100%")}$(document).ready(function(){size(),$(window).resize(size)});

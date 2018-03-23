@@ -1,0 +1,1 @@
+$(document).ready(function(){"gestión de documentos"==in_route?$(".index_menu > ul > a:nth(0)").addClass("selected"):"gestión de usuarios"==in_route?$(".index_menu > ul > a:nth(1)").addClass("selected"):"solicitudes de cuenta"==in_route?$(".index_menu > ul > a:nth(2)").addClass("selected"):"ajustes"==in_route&&$(".index_menu > ul > a:nth(3)").addClass("selected")});

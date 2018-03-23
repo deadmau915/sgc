@@ -1,0 +1,65 @@
+div.modal#user_settings(tabindex="-1", role="dialog")
+    div.modal-dialog(role="document")
+        div.modal-content
+            div.modal-header
+                h5.modal-title Ajustes de Usuario
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                    span(aria-hidden="true") &times
+       
+            div.modal-body
+                div.modal_content
+                    div.table_element.table_none_style
+                        div.content_table
+                            label Identificación:
+                            span.id
+                            
+                    div.separator
+                    
+                    div.table_element.table_none_style
+                        div.content_table
+                            label Nombre:
+                            span.name
+                        div.content_table
+                            label Apellido:
+                            span.surname
+                        div.content_table
+                            label Email:
+                            span.email
+                            
+                    div.separator
+                    
+                    div.table_element.table_none_style
+                        div.content_table
+                            label Telefono:
+                            span.phone
+                        div.content_table
+                            label Dirección:
+                            span.address
+                            
+                    div.separator
+                    
+                    span.description.highlight Perfil
+                    
+                    div.table_element.table_none_style
+                        div.content_table
+                            label Investigador:
+                            span 
+                                label.switch
+                                    input.switch_roll_1(type="checkbox")
+                                    span.slider.round
+                        div.content_table
+                            label Técnico de Laboratorio:
+                            span
+                                label.switch
+                                    input.switch_roll_2(type="checkbox")
+                                    span.slider.round
+                        div.content_table
+                            label Auxiliar Administrativo:
+                            span
+                                label.switch
+                                    input.switch_roll_3(type="checkbox")
+                                    span.slider.round
+                    
+            div.modal-footer
+                button.btn.btn-primary#save_settings(type="button") Guardar
+                button.btn.btn-secondary(type="button", data-dismiss="modal") Cancelar

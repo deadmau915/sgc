@@ -1,0 +1,25 @@
+extends layout/struct_short
+
+block styles
+    link(rel="stylesheet", href="/css/views/login_register.css")
+    
+block modals
+    include modals/login/remember_pass
+    
+block content
+    div.content_form
+        div.logo_bann
+            img(src="/img/sgc_long_black.png")
+        div.form-group
+            label(for="email") Email
+            input.form-control#email(type="email", placeholder="Ingrese su email")
+        div.form-group
+            label(for="password") Contraseña
+            input.form-control#password(type="password", placeholder="Ingrese su contraseña")
+        div.form-group.text-center
+            a(href="#remember_pass",data-toggle="modal") ¿Olvidaste tu contraseña?
+        div.form-group.mt-4.text-center
+            button#accept.btn.btn-danger(type="submit") Iniciar
+            
+block scripts
+    script(src="/js/views/login.js")

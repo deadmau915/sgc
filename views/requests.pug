@@ -1,0 +1,38 @@
+extends layout/struct
+
+block styles
+    link(rel="stylesheet", href="/css/views/requests.css")
+block modals
+    include modals/requests/cancel_request
+    include modals/requests/confirm_request
+block content
+    div#settings_table.table_element
+        div.index_table.green
+            span No. Id.
+            span Nombre
+            span Apellido
+            span Perfil
+            span Fecha de Solicitud
+            span
+        -for(var i=0;i<40;i++)
+            div.content_table
+                span #{i+1} 1088784948
+                span Theodore William
+                span Wreyford Norrish
+                span Técnico de laboratorio
+                span 23-03-2018
+                span 
+                    a.confirm_request(data-target="#confirm_request",data-toggle="modal",title="Confirmar Solicitud"): i.fas.fa-check-circle
+                    a.cancel_request(data-target="#cancel_request",data-toggle="modal",title="Cancelar Solicitud"): i.fas.fa-times-circle
+
+        nav.content_pagination(aria-label="Page navigation example")
+            ul.pagination
+                li.page-item
+                    a#prev.page-link(aria-label="Previous")
+                        span(aria-hidden="true") &laquo;
+                li.page-item
+                    a#next.page-link(aria-label="Next")
+                        span(aria-hidden="true") &raquo;
+
+block scripts
+    script(src="js/views/requests.js")

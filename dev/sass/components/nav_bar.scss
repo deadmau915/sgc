@@ -1,0 +1,39 @@
+%flex_control{
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    width: 100%;
+}
+
+.nav_bar{
+    @extend %flex_control;
+    margin:0;
+    justify-content: flex-end;
+    background:#3f486f;
+    height: 50px;
+    color:#EEE;
+    
+    >a{
+        @extend %flex_control;
+        width: auto;
+        margin: 0;
+        border-left:1px solid #AAA;
+        
+        &:hover{
+            background:#2E375E;
+            color:#FFF;
+        }
+        
+        span{
+            @extend %flex_control;
+            margin:auto;
+            svg{
+                margin:auto;
+                margin-right: 7px;
+            }
+        }
+        >span{
+            padding:0 15px;
+        }
+    }
+}

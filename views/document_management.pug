@@ -1,0 +1,49 @@
+extends layout/struct
+
+block styles
+    link(rel="stylesheet", href="/css/views/document_management.css")
+    
+block modals
+    
+block content
+    div.content_form.mb-0
+        div.form-row
+            div.form-group.mr-2
+                select.form-control#search_by
+                    option(value="1") Título
+                    option(value="2") Descripción
+                    option(value="3") Categoría
+            div.form-group
+                input.form-control#search_content(type="text", placeholder="Ingrese Buscar")
+            div.form-group.text-center.ml-2
+                button#seach.btn.btn-info(type="submit") Buscar
+        
+        
+    div#document_management.table_element
+        div.index_table.blue
+            span Título
+            span Descripción
+            span Categoria
+            span
+        -for(var i=0;i<40;i++)
+            div.content_table
+                span #{i+1} Lorem ipsun dolor sit ament
+                span uallamcoper morbi purus e
+                span emper libero no
+                span 
+                    a.confirm_request(href="#",title="Descargar archivo",download): i.fas.fa-download
+
+        nav.content_pagination(aria-label="Page navigation example")
+            ul.pagination
+                li.page-item
+                    a#prev.page-link(aria-label="Previous")
+                        span(aria-hidden="true") &laquo;
+                li.page-item
+                    a#next.page-link(aria-label="Next")
+                        span(aria-hidden="true") &raquo;
+        div.content_form
+            div.form-group.text-center
+                button.btn.btn-info(onclick="location='/upload_document'",type="submit") Subir documento
+            
+block scripts
+    script(src="/js/views/document_management.js")

@@ -1,0 +1,36 @@
+extends layout/struct
+
+block styles
+
+block modals
+    include modals/user_management/deactivate_confirm
+    include modals/user_management/user_settings
+block content
+    div#settings_table.table_element
+        div.index_table.red
+            span No. Id.
+            span Nombre
+            span Apellido
+            span Perfil
+            span
+        -for(var i=0;i<40;i++)
+            div.content_table
+                span #{i+1} 1088784948
+                span Theodore William
+                span Wreyford Norrish
+                span Técnico de laboratorio
+                span 
+                    a.deactivate_user(data-target="#deactivate_confirm",data-toggle="modal",title="Desactivar Usuario"): i.fas.fa-trash-alt
+                    a.user_settings(data-target="#user_settings",data-toggle="modal",title="Ajustes de Usuario"): i.fas.fa-book
+
+        nav.content_pagination(aria-label="Page navigation example")
+            ul.pagination
+                li.page-item
+                    a#prev.page-link(aria-label="Previous")
+                        span(aria-hidden="true") &laquo;
+                li.page-item
+                    a#next.page-link(aria-label="Next")
+                        span(aria-hidden="true") &raquo;
+
+block scripts
+    script(src="js/views/user_management.js")

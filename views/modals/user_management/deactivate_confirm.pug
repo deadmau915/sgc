@@ -1,0 +1,28 @@
+div.modal#deactivate_confirm(tabindex="-1", role="dialog")
+    div.modal-dialog(role="document")
+        div.modal-content
+            div.modal-header
+                h5.modal-title Desactivar Usuario
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                    span(aria-hidden="true") &times
+       
+            div.modal-body
+                div.modal_content
+                    span.description.highlight ¿Está seguro de desactivar este usuario?
+                    div.table_element.table_none_style
+                        div.content_table
+                            label Identificación:
+                            span.id
+                        div.content_table
+                            label Nombre:
+                            span.name
+                        div.content_table
+                            label Apellido:
+                            span.surname
+                        div.content_table
+                            label Perfil:
+                            span.profile
+                        
+            div.modal-footer
+                button.btn.btn-primary#save_deactive(type="button") Confirmar
+                button.btn.btn-secondary(type="button", data-dismiss="modal") Cancelar

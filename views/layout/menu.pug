@@ -1,0 +1,33 @@
+///////////// get vars  //////////////
+script.
+    var in_route = "#{index_route}";
+//////////////////////////////////////
+
+input#menu_toggle(type="checkbox")
+div.index_menu
+    label#icon_toggle(for="menu_toggle"): i.fas.fa-bars
+    ul
+        div.main_logo
+            img(src="img/sgc_white.png")
+        div.user_information
+            img(src="img/user.png")
+            span.name Pepito Perez Rodriguez Sumadreano
+            span.roll Director Cientifico
+            
+        div.line
+        
+        a(href="/document_management"): li
+            span: i.fas.fa-file-alt
+            span Gestión de documentos
+        a(href="/user_management"): li
+            span: i.fas.fa-users
+            span Gestión de usuarios
+        a(href="/requests"): li
+            span: i.fas.fa-code-branch
+            span Solicitudes de cuenta
+        a(href="/settings"): li
+            span: i.fas.fa-wrench
+            span Ajustes
+        a(href="#"): li
+            span: i.fas.fa-power-off
+            span Salir

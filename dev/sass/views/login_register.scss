@@ -1,0 +1,14 @@
+@import "../components/custom_content.scss";
+
+.content_form{
+    background: rgba(255,255,255,0.8);
+    margin:auto;
+    color:#333;
+    font-weight:bolder;
+    padding:20px;
+    
+    p{
+        font-size:13px;
+        line-height:16px;
+    }
+}

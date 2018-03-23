@@ -1,0 +1,45 @@
+extends layout/struct
+
+block styles
+    // link(rel="stylesheet", href="/css/views/login.css")
+    
+block modals
+    
+block content
+    div.content_form
+        div.form-group
+            label(for="title") Título
+            input.form-control#title(type="text", placeholder="Ingrese el titulo del documento")
+        div.form-group
+            label(for="summary") Resumen
+            textarea.form-control#summary(rows="3",placeholder="maximo 200 caracteres")
+        div.form-group
+            label(for="description") Resumen
+            textarea.form-control#description(rows="3",placeholder="maximo 200 caracteres")
+        div.form-group
+            label(for="category") Categoria
+            input.form-control#category(type="text", placeholder="Ingrese la categoria del documento")
+        div.form-group
+            label(for="date") Fecha
+            input.form-control#date(type="date", placeholder="Ingrese la fecha")
+        div.form-group
+            label(for="type") Tipo de documento
+            input.form-control#type(type="text", placeholder="Ingrese el tipo documento")
+        div.form-group
+            label(for="format") Tipo de documento
+            input.form-control#format(type="text", placeholder="Ingrese el formato documento")
+        div.form-group
+            label(for="level_privacy") Nivel de privacidad
+            select.form-control#level_privacy
+                option(value="investigador") Investigador
+                option(value="técnico de laboratorio") Técnico de laboratorio
+                option(value="auxiliar administrativo") Auxiliar administrativo
+        div.form-group
+            label(for="file") Archivo
+            input.form-control#file(type="file")
+        div.form-row.mt-4.ml-auto.mr-auto
+            button#accept.btn.btn-success.mr-2(type="submit") Subir archivo
+            button#accept.btn.btn-danger(onclick="location='/document_management'",type="submit") Cancelar
+            
+block scripts
+    // script(src="/js/views/register.js")

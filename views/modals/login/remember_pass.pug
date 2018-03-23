@@ -1,0 +1,21 @@
+div.modal#remember_pass(tabindex="-1", role="dialog")
+    div.modal-dialog(role="document")
+        div.modal-content
+            div.modal-header
+                h5.modal-title Recordar Contraseña
+                button.close(type="button", data-dismiss="modal", aria-label="Close")
+                    span(aria-hidden="true") &times
+       
+            div.modal-body
+                div.content_form
+                    div.logo_bann
+                        img(src="/img/sgc_long_black.png")
+                    p.text-center.
+                        Completa el campo para solicitar una nueva contraseña que recibirás al correo electrónico. 
+                        Recuerda que debes entrar y cambiar tu contraseña desde el panel de ajustes.
+                    div.form-group
+                        label(for="email") Email
+                        input.form-control#email_to_remember(type="email", placeholder="Ingrese su email")
+            div.modal-footer
+                button.btn.btn-primary#send(type="button") Enviar
+                button.btn.btn-secondary#cancel_remember_pass(type="button", data-dismiss="modal") Cancelar

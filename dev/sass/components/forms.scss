@@ -1,0 +1,36 @@
+.content_form{
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+    max-width: 450px;
+    margin:20px auto;
+    padding:0 20px;
+    .logo_bann{
+        margin:20px auto;
+        width: 80%;
+        padding:0;
+        max-width: 200px;
+        
+        img{
+            width: 100%;
+            height: auto;
+            margin:0 auto;
+            opacity: 0.8;
+        }
+    }
+    a{
+        color: #126ed0;
+        &:hover{
+            color:#0b5cb3;    
+        }
+    }
+    .danger{
+        color: #B00;
+    }
+    .success{
+        color: #0B0;
+    }
+    #name,#surname{
+        text-transform: capitalize;
+    }
+}

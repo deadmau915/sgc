@@ -1,0 +1,1 @@
+var exports=module.exports={};exports.v_email=function(){return alert("hola"),!0};
